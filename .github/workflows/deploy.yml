@@ -40,8 +40,8 @@ jobs:
                   hugo-version: "latest"
                   extended: true
         
-            - name: Download Go modules
-              run: go mod download && tree
+            - name: Download Hugo modules
+              run: hugo mod get -u
 
             - name: Build
               run: hugo --minify --gc
