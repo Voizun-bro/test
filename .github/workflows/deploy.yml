@@ -41,7 +41,7 @@ jobs:
                   extended: true
         
             - name: Download Go modules
-              run: go mod download
+              run: go mod download && tree
 
             - name: Build
               run: hugo --minify --gc
