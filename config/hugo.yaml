@@ -33,7 +33,7 @@ pagination:
     pagerSize: 5
 
 permalinks:
-    post: /p/:slug/
+    post: /post/:slug/
     page: /:slug/
 
 params:
@@ -198,7 +198,14 @@ params:
 ### See https://stack.jimmycai.com/config/menu
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main: []
+    main:
+        - identifier: home
+          name: Home
+          url: /
+          weight: -100
+          params:
+            icon: home
+            newTab: true
 
     social:
         - identifier: github
